@@ -23,7 +23,7 @@ listen primary
     option httpchk /primary
     http-check expect status 200
     default-server inter 3s fall 3 rise 2 on-marked-down shutdown-sessions
-${PRIMARY_SERVERS}
+${PRIMARIES}
 
 listen standbys
     balance roundrobin
@@ -31,4 +31,4 @@ listen standbys
     option httpchk /replica
     http-check expect status 200
     default-server inter 3s fall 3 rise 2 on-marked-down shutdown-sessions
-${STANDBY_SERVERS}
+${STANDBYS}
