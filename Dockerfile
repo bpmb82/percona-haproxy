@@ -5,6 +5,8 @@ curl -O https://repo.percona.com/apt/percona-release_latest.generic_all.deb && \
 apt install -y gnupg2 lsb-release gettext-base ./percona-release_latest.generic_all.deb && \
 apt update && percona-release setup ppg15 && \
 apt install -y percona-haproxy && \
+mkdir -p /run/haproxy && \
+chmod a+rw /run/haproxy && \
 rm -f percona-release_latest.generic_all.deb && \
 apt-get autoremove -y && apt-get clean && \
 rm -rf /var/lib/apt/lists/* && \
