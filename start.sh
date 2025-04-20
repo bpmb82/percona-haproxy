@@ -16,11 +16,11 @@ generate_server_block() {
   cat "$tmpfile"
 }
 
-if ! [ -f /etc/haproxy/haproxy.cfg ]; then
+if ! [ -f /etc/haproxy.cfg ]; then
   export PRIMARIES="$(generate_server_block ${PRIMARY_SERVERS})"
   export STANDBYS="$(generate_server_block ${STANDBY_SERVERS})"
 
-  envsubst < /etc/haproxy/haproxy.cfg.template > /etc/haproxy/haproxy.cfg
+  envsubst < /etc/haproxy/haproxy.cfg.template > /etc/haproxy.cfg
 fi
 
-exec haproxy -f /etc/haproxy/haproxy.cfg
+exec haproxy -f /etc/haproxy.cfg
