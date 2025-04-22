@@ -28,14 +28,14 @@ listen primary
     server pg3 10.8.0.22:5432 maxconn 100 check port 8008
 ```
 
-### SECONDARY_SERVERS
+### STANDBY_SERVERS
 
 Pass a comma separated list of <hostname>:<ip_address>:\<port> for use in the secondary section.
 
 ##### NOTE: \<port> is optional, defaults to 5432
 
 ```
-SECONDARY_SERVERS=pg1:10.8.0.20:5432,pg2:10.8.0.21:5432
+STANDBY_SERVERS=pg1:10.8.0.20:5432,pg2:10.8.0.21:5432
 ```
 This will render as:
 
