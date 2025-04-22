@@ -30,7 +30,7 @@ listen primary
 
 ### STANDBY_SERVERS
 
-Pass a comma separated list of <hostname>:<ip_address>:\<port> for use in the secondary section.
+Pass a comma separated list of \<hostname>:\<ip_address>:\<port> for use in the secondary section.
 
 ##### NOTE: \<port> is optional, defaults to 5432
 
