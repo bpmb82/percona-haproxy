@@ -8,7 +8,7 @@ You can pass the following environment variables:
 
 ### PRIMARY_SERVERS
 
-Pass a comma separated list of <hostname>:<ip_address>:\<port> for use in the primary section.
+Pass a comma separated list of \<hostname>:\<ip_address>:\<port> for use in the primary section.
 
 ##### NOTE: \<port> is optional, defaults to 5432
 
